@@ -61,17 +61,24 @@ void djikstra(ll root, vector<vector<pair<ll, ll>>>& graph, vector<ll> &dist){
 }
 /*--------------------------------------------------------------------------------------------------------------------------*/
 vector<pair<ll, ll>> factorize(ll n){
+    // sqrt(n)
+    
     vector<pair<ll,ll>> ans;
     for(ll i = 2; i*i<=n; i++){
         if(n%i == 0){
             ll power = 0;
             // i is a factor of n
             while(n%i == 0){
-                n/=i;
+                n = n/i;
                 power++;
             }
             ans.pb({i, power});
         }
+    }
+    // check for the only prime factor which will be > sqrt(n)
+    // can be proved using contradiction(dw)
+    if(n > 1){
+        ans.pb({n, 1});
     }
     return ans;
 }
