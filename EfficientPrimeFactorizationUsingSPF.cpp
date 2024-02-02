@@ -62,6 +62,7 @@ ll N = 1e7;
 vector<ll> spf(N + 1);
 
 void smallestPrimeFactor() {
+    // O(Nloglog(N))
     for(ll i = 0; i<=N; i++){
         spf[i] = i;
     }
@@ -78,6 +79,7 @@ void smallestPrimeFactor() {
 }
 
 vector<pair<ll, ll>> PrimeFactorization(ll x, vector<ll> &spf){
+    // log(x)
     vector<pair<ll, ll>> factors;
 
     while(x > 1){
