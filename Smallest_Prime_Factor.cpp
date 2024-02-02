@@ -59,13 +59,13 @@ void djikstra(ll root, vector<vector<pair<ll, ll>>>& graph, vector<ll> &dist){
 }
 /*--------------------------------------------------------------------------------------------------------------------------*/
 
-// O(nlog(log(n)))
 // precompute spf of every number <= n 
 
 ll N = 1e7;
 vector<ll> spf(N + 1);
 
 void sieve() {
+    // O(NloglogN)
     for(ll i = 0; i<=N; i++){
         spf[i] = i;
     }
