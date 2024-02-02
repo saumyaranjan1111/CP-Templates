@@ -59,12 +59,12 @@ void djikstra(ll root, vector<vector<pair<ll, ll>>>& graph, vector<ll> &dist){
 }
 /*--------------------------------------------------------------------------------------------------------------------------*/
 
-// O(nlog(log(n)))
 // find all prime numbers from 1 to n
 
 ll N = 1e7;
 vector<bool> isPrime(N + 1, true);
 void sieve() {
+    // O(Nlog(log(N)))
     isPrime[0] = false;
     isPrime[1] = false;
     for(ll i = 2; i*i <= N; i++){
