@@ -58,6 +58,11 @@ void djikstra(ll root, vector<vector<pair<ll, ll>>>& graph, vector<ll> &dist){
     }
 }
 /*--------------------------------------------------------------------------------------------------------------------------*/
+
+// phi(prime) = prime - 1
+// phi(prime^k) = prime^k - prime^(k-1)
+// phi(ab) = phi(a)phi(b), given a, b are comprimes
+
 ll phi(ll n){
     // sqrt(N) : if the prime factorization is not available
     // log(N) : if the prime factorization of the number is available (since we will only have to iterate through all the prime factors which we already have, and the no of prime factors that a no can have is <= log(N))
