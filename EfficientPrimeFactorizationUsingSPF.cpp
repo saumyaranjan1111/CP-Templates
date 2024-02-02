@@ -62,6 +62,7 @@ ll N = 1e7;
 vector<ll> spf(N + 1);
 
 void smallestPrimeFactor() {
+    
     // O(Nloglog(N))
     for(ll i = 0; i<=N; i++){
         spf[i] = i;
