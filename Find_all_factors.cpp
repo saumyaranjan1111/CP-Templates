@@ -59,6 +59,7 @@ void djikstra(ll root, vector<vector<pair<ll, ll>>>& graph, vector<ll> &dist){
 }
 /*--------------------------------------------------------------------------------------------------------------------------*/
 vector<ll> factors(ll n){
+    // sqrt(n)
     vector<ll> fact;
     for(ll i = 1; i*i<=n; i++){
         if(n%i == 0){
