@@ -35,7 +35,7 @@ ll expo(ll a, ll b, ll mod) {ll res = 1; while (b > 0) {if (b & 1)res = (res * a
 ll mod_add(ll a, ll b, ll m) {a = a % m; b = b % m; return (((a + b) % m) + m) % m;}
 ll mod_mul(ll a, ll b, ll m) {a = a % m; b = b % m; return (((a * b) % m) + m) % m;}
 ll mod_sub(ll a, ll b, ll m) {a = a % m; b = b % m; return (((a - b) % m) + m) % m;}
-ll mod_div(ll a, ll b, ll m) {a = a % m; b = expo(b, m-2, m); return (((a * b) % m) + m) % m;}
+ll mod_div(ll a, ll b, ll m) {a = a % m; b = expo(b, m-2, m) % m; return (((a * b) % m) + m) % m;}
 
 void _print(vector<ll> &arr){for(auto &x:arr)cout<<x<<" ";cout<<endl;}
 
