@@ -26,7 +26,7 @@ struct Hashing{
             inversePowersOfP[i] = (inversePowersOfP[i + 1] * p) % m;
         }
     }
-    void calculatePrefixHashes(){
+    void calculatePrefixHashes(){ // O(n)
         ll hashSoFar = 0;
         for(int i = 0; i < n; i++){
             hashSoFar = (hashSoFar + (s[i] - 'a' + 1) * powersOfP[i]) % m;
